@@ -71,4 +71,4 @@ python-dotenv
 
 ## 👨‍🏫 Autor
 Regalado Cabrera Reiner Alexander
-Fecha: 08.08.2026
+Fecha: 08.08.2026 (actualizado)
