@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado de Reserva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        {% if resultado %}
+        <div class="alert alert-success">
+            <h4 class="alert-heading">¡Reserva registrada!</h4>
+            <p>Código de reserva: <strong>{{resultado.codigo_reserva}}</strong></p>
+            <p>ID de reserva: {{resultado.id_reserva}}</p>
+            <p class="mb-0">{{resultado.mensaje}}</p>
+        </div>
+        {% else %}
+        <div class="alert alert-danger">
+            <h4 class="alert-heading">No se pudo registrar la reserva</h4>
+            <p class="mb-0">Verifica los datos ingresados e intenta nuevamente (posible conflicto de disponibilidad de habitación).</p>
+        </div>
+        {% endif %}
+        <a href="/nueva-reserva" class="btn btn-primary">Registrar otra reserva</a>
+        <a href="/" class="btn btn-secondary">Volver al inicio</a>
+    </div>
+</body>
+</html>
